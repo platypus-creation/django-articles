@@ -1,0 +1,16 @@
+{% extends "articles/base.html" %}
+{% load i18n %}
+
+{% block navigation %}
+  <h1>
+    {% blocktrans with year as year and month as month %}{{ month }} {{ year }}'s Articles{% endblocktrans %}
+  </h1>
+{% endblock %}
+
+
+{% block content %}
+  {% with object_list as article_translations %}
+    {% include "articles/articles_banner.html" %}
+  {% endwith %}
+{% endblock %}
+

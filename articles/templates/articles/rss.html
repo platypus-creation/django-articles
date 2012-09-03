@@ -1,0 +1,4 @@
+{% load i18n %}
+{% if url %}
+  <link rel="alternate" type="application/rss+xml" title="{% trans "RSS Feed" %}" href="{{ url }}" />  
+{% endif %}

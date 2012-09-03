@@ -1,0 +1,21 @@
+{% extends "articles/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Articles" %}{% endblock %}
+
+{% block navigation %}
+  <h1>{% trans "Articles" %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% include "articles/articles_banner.html" %}
+{% endblock %}
+
+{% block side %}
+  <h2>{% trans "Archives" %}</h2>
+  <ul>
+    {% for year in date_list %}
+      <li><a href="{% url django.views.generic.date_based.archive_year year|date:"Y" %}">{{ year|date:"Y" }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

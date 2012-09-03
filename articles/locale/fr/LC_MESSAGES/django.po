@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-16 12:00+0100\n"
+"PO-Revision-Date: 2011-03-16 12:01\n"
+"Last-Translator: <guillaume.esquevin@platypus-creation.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Translated-Using: django-rosetta 0.5.6\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+
+#: feeds.py:9
+msgid "RSS Title"
+msgstr "Titre du RSS"
+
+#: models.py:10
+msgid "Picture"
+msgstr "Image"
+
+#: models.py:13
+msgid "Head code"
+msgstr "Code dans le head"
+
+#: models.py:46 models.py:60
+msgid "Article"
+msgstr "Article"
+
+#: models.py:47 templates/articles/article_archive.html:4
+#: templates/articles/article_archive.html:7 templates/articles/base.html:7
+#: templates/articles/base.html.py:14
+msgid "Articles"
+msgstr "Articles"
+
+#: models.py:55
+msgid "Language"
+msgstr "Langage"
+
+#: models.py:56
+msgid "Title"
+msgstr "Titre"
+
+#: models.py:57
+msgid "Slug"
+msgstr "Slug"
+
+#: models.py:58
+msgid "Published"
+msgstr "Publié"
+
+#: models.py:59
+msgid "Publication date"
+msgstr "Date de publication"
+
+#: models.py:78
+msgid "Article Translation"
+msgstr "Traduction de l'article"
+
+#: models.py:79
+msgid "Article Translations"
+msgstr "Traductions de l'article"
+
+#: models.py:88
+msgid "URL pattern"
+msgstr "Motif d'URL"
+
+#: models.py:88
+msgid "Path to your page, e.g. /myapp/mypage/"
+msgstr "Chemin vers votre page, ex: /monapp/mapage/"
+
+#: models.py:89
+msgid "End Date"
+msgstr "Date de fin"
+
+#: templates/articles/article.html:24
+#, python-format
+msgid ""
+"\n"
+"      Published on %(date)s\n"
+"    "
+msgstr ""
+"\n"
+"Publié le %(date)s"
+
+#: templates/articles/article.html:31
+msgid "Translations"
+msgstr "Traductions"
+
+#: templates/articles/article_archive.html:15
+#: templates/articles/article_archive_year.html:15
+msgid "Archives"
+msgstr "Archives"
+
+#: templates/articles/article_archive_month.html:6
+#, python-format
+msgid "%(month)s %(year)s's Articles"
+msgstr "Articles de %(month)s %(year)s"
+
+#: templates/articles/article_archive_year.html:5
+#, python-format
+msgid "%(year)s's Articles"
+msgstr "Articles de %(year)s"
+
+#: templates/articles/articles_banner.html:21
+msgid "All the articles"
+msgstr "Tous les articles"
+
+#: templates/articles/comments.html:2
+msgid "Comments"
+msgstr "Commentaires"
+
+#: templates/articles/comments.html:20
+msgid "Comment"
+msgstr "Commenter"
+
+#: templates/articles/rss.html:3
+msgid "RSS Feed"
+msgstr "Flux RSS"
+
+#~ msgid "Submit"
+#~ msgstr "Soumettre"

@@ -1,0 +1,28 @@
+{% load i18n %}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% trans "Articles" %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  </head>
+  <body {% if not article_translation.published %}class="draft"{% endif %}>
+    
+    {% block navigation %}
+    <h1>{% trans "Articles" %}</h1>
+    {% endblock %}
+
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    
+    <div class="side">
+      {% block side %}
+      {% endblock %}
+    </div>
+    
+  </body>
+</html>

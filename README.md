@@ -1,0 +1,1 @@
+A Django application to handle basic articles and link them to any page.

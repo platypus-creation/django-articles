@@ -1,0 +1,23 @@
+{% load thumbnail i18n %}
+{% if article_translations %}
+  <ul class="articleBanners">
+    {% for article_translation in article_translations %}
+      {% if article_translation.article.picture %}
+        {% thumbnail article_translation.article.picture "300x180" crop="center" as thumbnail %}
+        <li {% if not article_translation.published %}class="draft"{% endif %}>
+          <a  class="banner" href="{{ article_translation.get_absolute_url }}" title="{{ article_translation.title }}">
+            <img src="{% firstof  thumbnail.url thumbnail %}"/ alt="{{ article_translation.title }}">
+            <span class="summary">
+              <h3>{{ article_translation.title }}</h3>
+              {{ article_translation.content|safe|striptags|truncatewords:20 }}
+            </span>
+          </a>
+        </li>
+        {% endthumbnail %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+  {% if more %}
+    <a href="?all_articles=true" class="more">{% trans "All the articles" %}</a>
+  {% endif %}
+{% endif %}

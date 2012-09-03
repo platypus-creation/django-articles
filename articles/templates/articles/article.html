@@ -1,0 +1,44 @@
+{% extends "articles/base.html" %}
+{% load thumbnail beautifully i18n markup %}
+
+{% block navigation %}
+  <h1>{{ article_translation.title }}</h1>  
+{% endblock %}
+
+{% block title %}{{ article_translation.article.title }}{% endblock %}
+
+{% block content %}
+  <div class="text">
+    {{ article_translation.content|markdown|beautifully|safe }}
+  </div>
+{% endblock %}
+
+{% block side %}
+  {% if article_translation.article.picture %}
+    {% thumbnail article_translation.article.picture "300x180" crop="center" as thumbnail %}
+    <div class="banner" title="{{ article_translation.title }}">
+      <img src="{% firstof thumbnail.url thumbnail %}" alt="{{ article_translation.title }}">
+    </div>
+    {% endthumbnail %}
+  {% endif %}
+
+  <span class="date">
+    {% blocktrans with article_translation.publication_date|date:"j F Y" as date %}
+      Published on {{ date }}
+    {% endblocktrans %}
+  </span>
+  {# <span class="author">{{ article_translation.article.author.username }}</span> #}
+
+  {% if article_translation.translations.count %}
+    <h2>{% trans "Translations" %}</h2>
+    <ul>
+      {% for translation in article_translation.translations %}
+        <li class="{{ translation.language }}"><a href="{{ translation.get_absolute_url }}">{{ translation.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% with article_translation.article as object %}
+    {% include "articles/comments.html" %}
+  {% endwith %}
+{% endblock %}
