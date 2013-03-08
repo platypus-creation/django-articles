@@ -31,6 +31,8 @@ if len(settings.LANGUAGES) == 1:
     articletranslationform = SingleLanguageForm
 
 jsFiles = [settings.STATIC_URL + 'admin/tinymce/jscripts/tiny_mce/tiny_mce.js', settings.STATIC_URL + 'js/tinymce_setup.js',]
+if hasattr(settings, 'ARTICLES_JS_FILES'):
+    jsFiles = settings.ARTICLES_JS_FILES
 if hasattr(settings, 'ARTICLES_USE_MARKDOWN') and settings.ARTICLES_USE_MARKDOWN:
     jsFiles = []
     
